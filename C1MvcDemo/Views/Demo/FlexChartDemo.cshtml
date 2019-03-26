@@ -1,0 +1,41 @@
+﻿@model FlexChartModel
+
+@{
+    ViewData["Title"] = "C1 ASP.NET Core Demo";
+}
+
+<h3>Flex Chart Demo</h3>
+
+<div class="form-horizontal">
+    <div class="form-group">
+        <label class="col-md-3 control-label">Chart Type</label>
+        <div class="col-md-9">
+            <c1-combo-box id="typeMenu" selected-index-changed="typeMenu_SelectedIndexChanged" selected-index="0">
+                <c1-items-source source-collection="@Model.Settings["ChartType"]"></c1-items-source>
+            </c1-combo-box>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label">Stacking</label>
+        <div class="col-md-9">
+            <c1-combo-box id="stackingMenu" selected-index-changed="stackingMenu_SelectedIndexChanged" selected-index="0">
+                <c1-items-source source-collection="@Model.Settings["Stacking"]"></c1-items-source>
+            </c1-combo-box>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-3 control-label">Rotated</label>
+        <div class="col-md-9">
+            <c1-combo-box id="rotatedMenu" selected-index-changed="rotatedMenu_SelectedIndexChanged" selected-index="0">
+                <c1-items-source source-collection="@Model.Settings["Rotated"]"></c1-items-source>
+            </c1-combo-box>
+        </div>
+    </div>
+</div>
+
+<c1-flex-chart id="chartTypes" binding-x="Country">
+    <c1-items-source source-collection="@Model.CountrySalesData"></c1-items-source>
+    <c1-flex-chart-series binding="Sales" name="Sales"></c1-flex-chart-series>
+    <c1-flex-chart-series binding="Expenses" name="Expenses"></c1-flex-chart-series>
+    <c1-flex-chart-series binding="Downloads" name="Downloads"></c1-flex-chart-series>
+</c1-flex-chart>

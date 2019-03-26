@@ -1,0 +1,14 @@
+{
+  "ProjectFilePath": "d:\\WORK\\WORKSPACE\\TrainingWorkspace\\Task6 - C1 MVC\\C1MvcDemo\\C1MvcDemo\\C1MvcDemo.csproj",
+  "TargetFramework": "netcoreapp2.2",
+  "TagHelpers": [],
+  "Configuration": {
+    "ConfigurationName": "MVC-2.1",
+    "LanguageVersion": "2.1",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.1"
+      }
+    ]
+  }
+}
